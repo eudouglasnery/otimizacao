@@ -1,0 +1,11 @@
+reset;
+model dieta.mod;
+data dieta.dat;
+
+option solver cplex; 
+
+solve;
+
+printf "\n--- RESULTADOS DA DIETA ---\n";
+display Custo_Total;
+display x;

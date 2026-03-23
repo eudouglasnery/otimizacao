@@ -1,0 +1,31 @@
+set ALIMENTOS := carne frango peixe presunto lasanha almondega macarrao ovo ;
+set NUTRIENTES := A C B1 B2 Na cal ;
+
+#custos e limites de porções
+param: custo q_min q_max :=
+carne       3.19  2  10
+frango      2.59  2  10
+peixe       2.29  2  10
+presunto    2.89  2  10
+lasanha     1.89  2  10
+almondega   1.99  2  10
+macarrao    1.99  2  10
+ovo         2.49  2  10 ;
+
+#nutrientes
+param: m_min M_max :=
+A      700   20000
+C      700   20000
+B1     700   20000
+B2     700   20000
+Na       0   50000
+cal  16000   24000 ;
+
+param a:
+            carne frango peixe presunto lasanha almondega macarrao ovo :=
+A           60    0      10    40       15      70        25       60
+C           20    8      8     40       35      30        50       20
+B1          10    20     15    35       15      15        25       15
+B2          15    20     10    10       15      15        15       10
+Na          938   2180   945   278      1182    896       1329     1397
+cal         295   770    440   430      315     400       370      450 ;
